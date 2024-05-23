@@ -17,18 +17,35 @@
                 <div>
                     <form action="{{ route('admin_register_submit') }}" method="POST" class="space-y-6">
                         @csrf
-                        <div class="">
-                            <input
-                                class="w-full focus:outline-none text-primary border-2
-                                 border-softGrey px-2 py-4 placeholder:text-xs placeholder:lg:text-sm
-                                 tracking-wider placeholder:text-grey-600 hover:border-2  hover:border-primary"
-                                type="text" name="name" id="" value="{{ old('name') }}" placeholder="Enter full name">
-                            <div>
-                                @error('name')
-                                    <span class="text-red-900 text-xs">{{ $message }}</span>
-                                @enderror
+
+                        <div class="flex w-full space-x-6">
+                            <div class="w-full">
+                                <input
+                                    class="w-full focus:outline-none text-primary border-2
+                                     border-softGrey px-2 py-4 placeholder:text-xs placeholder:lg:text-sm
+                                     tracking-wider placeholder:text-grey-600 hover:border-2  hover:border-primary"
+                                    type="text" name="firstname" id="" value="{{ old('firstname') }}" placeholder="Enter first name">
+                                <div>
+                                    @error('firstname')
+                                        <span class="text-red-900 text-xs">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="w-full">
+                                <input
+                                    class="w-full focus:outline-none text-primary border-2
+                                     border-softGrey px-2 py-4 placeholder:text-xs placeholder:lg:text-sm
+                                     tracking-wider placeholder:text-grey-600 hover:border-2  hover:border-primary"
+                                    type="text" name="lastname" id="" value="{{ old('lastname') }}" placeholder="Enter last name">
+                                <div>
+                                    @error('lastname')
+                                        <span class="text-red-900 text-xs">{{ $message }}</span>
+                                    @enderror
+                                </div>
                             </div>
                         </div>
+
+                
 
                         <div class="">
                             <input
@@ -95,9 +112,4 @@
 
     </section>
 
-    {{-- <div class="text-center space-y-8 bg-primary px-4 py-8">
-        <p class="text-white text-sm lg:text-base font-light">
-            Sorry to make some changes on the admin dashbard can only be done through the pc or laptop
-        </p>
-    </div> --}}
 </x-auth>

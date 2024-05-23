@@ -1,25 +1,20 @@
-<div class="bg-white fixed top-0 right-0 left-0 h-24 z-10 p-6 mx-auto lg:px-16 ">
-    <div class="flex justify-between items-center">
+<div class="relative bg-white flex justify-between items-center h-20 ml-60 px-16">
+
+    <div>
+        <h2>@yield('heading')</h2>
+    </div>
+    <div id="open-admin-nav" class="flex justify-center items-center gap-2 cursor-pointer transition-all duration-900 hover:bg-softGrey h-full px-4">
+        <img class="w-12 h-12 rounded-full border-2 border-secondary" src="{{ asset('assets/images/home/p1.jpeg') }}" alt="">
+        <h3 class="text-sm tracking-wider">Victor</h3>
+    </div>
+
+    <div id="admin-nav-modal" class="absolute hidden top-20 text-black right-16 bg-white flex flex-col pl-8 pr-12 py-8 space-y-4 rounded-b-lg">
         <div>
-            <img class="w-36" src="{{ asset('assets/images/home/home.png') }}" alt="">
+            <a href="" class="transition-all duration-200 hover:text-primary">Profile</a>
         </div>
-
-
-        <div class="relative">
-            <div>
-                <button id="admin-nav-btn">
-                    <img class="w-16 border-4 border-primary rounded-full" src="{{ asset('assets/images/home/p1.jpeg') }}"
-                        alt="">
-                </button>
-            </div>
-
-            <div id="admin-nav-modal" class="hidden inline-block
-            absolute top-16 right-0 bg-white flex flex-col pt-8 pb-10 rounded-b-lg
-             pl-4 pr-20 space-y-4 border-primary border-2">
-                <a href="" class="transition duration-1000 hover:translate-x-6">Account</a>
-                <a href="{{ route('admin_logout') }}" class="transition duration-1000 hover:translate-x-6"> Logout</a>
-                <button class="transition duration-1000 hover:translate-x-6">Logout</button>
-            </div>
+        <div>
+            <a href="{{ route('admin_logout') }}" class="transition-all duration-200 hover:text-primary">Logout</a>
         </div>
     </div>
+
 </div>

@@ -13,6 +13,20 @@ export default {
             xl: "1440px",
         },
         extend: {
+            keyframes: {
+                slideIn: {
+                    '0%': { transform: 'translateX(100%)' },
+                    '100%': { transform: 'translateX(0)' },
+                },
+                slideOut: {
+                    '0%': { transform: 'translateX(0)' },
+                    '100%': { transform: 'translateX(100%)' },
+                },
+              },
+              animation: {
+                slideIn: 'slideIn 0.5s ease-out forwards',
+                slideOut: 'slideOut 0.5s ease-out forwards',
+              },
             colors: {
                 primary: "#7c6329",
                 hoverPrimary: "#57451d",
@@ -22,6 +36,9 @@ export default {
                 secondary: '#5c727d',
                 lightGrey: '#e8e8e8',
                 softBg: "#cbc1a9",
+                flashError: "#b91c1c",
+                flashSuccess: "##198754",
+                flashNormal: "###0C6EFD",
             },
             fontFamily: {
                 sans: ["Poppins", "sans-serif"],

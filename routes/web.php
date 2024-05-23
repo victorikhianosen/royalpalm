@@ -3,8 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PageController;
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\StaffController;
+use App\Http\Controllers\Admin\AdminNavbar;
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Post\PostHeroController;
+use App\Http\Controllers\Admin\AdminSlideController;
 
 
 Route::get('/', [PageController::class, 'index'])->name('home');
@@ -27,6 +30,16 @@ Route::get('admin/forget-password', [AdminController::class, 'admin_forget_passw
 
 Route::post('admin/register/submit', [AdminController::class, 'admin_register_submit'])->name('admin_register_submit');
 Route::post('admin/login/submit', [AdminController::class, 'admin_login_submit'])->name('admin_login_submit');
-Route::get('admin/dashboard', [AdminController::class, 'admin_dashboard'])->name('admin_dashboard');
-// Route::get('admin/dashboard', [AdminController::class, 'admin_dashboard'])->middleware('admin:admin')->name('admin_dashboard');
+// Route::get('admin/dashboard', [AdminController::class, 'admin_dashboard'])->name('admin_dashboard');
+Route::get('admin/dashboard', [AdminController::class, 'admin_dashboard'])->middleware('admin:admin')->name('admin_dashboard');
+Route::get('admin/add-property', [AdminController::class, 'admin_add_property'])->middleware('admin:admin')->name('admin_add_property');
+
+
+Route::get('admin/slide/index', [AdminSlideController::class, 'index'])->middleware('admin:admin')->name('admin_slide_index');
+Route::post('admin/slide/add', [AdminSlideController::class, 'add'])->middleware('admin:admin')->name('admin_slide_add');
+
+
+
+
+
 Route::get('admin/logout', [AdminController::class, 'admin_logout'])->name('admin_logout');

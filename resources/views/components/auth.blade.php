@@ -4,6 +4,5 @@
 
     {{ $slot }}
 
-</body>
 
-</html>
+<x-footer />

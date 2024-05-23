@@ -1,6 +1,7 @@
+<x-layout>
 
- <x-layout>
 
+    {{-- HERRO --}}
     <section>
         <div class=" bg-softGrey">
             <div class="mx-auto p-6 py-10 md:py-20 px-6 md:px-16">
@@ -45,14 +46,11 @@
                             </div>
                         </div>
                     </div>
-                    {{-- <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div> --}}
+
                 </div>
             </div>
         </div>
     </section>
-
 
     {{-- ABOUT --}}
 
@@ -554,25 +552,29 @@
                     Search By Area
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
-                
+
 
                 <div class="relative col-span-2">
-                    <img id="facility-img" class="" src="{{ asset('assets/images/home/neighbour.jpeg') }}" alt="">
-                
+                    <img id="facility-img" class="" src="{{ asset('assets/images/home/neighbour.jpeg') }}"
+                        alt="">
+
                     {{-- Small Images --}}
                     <div class="absolute w-72 md:w-96 bottom-4 right-0 left-0 grid grid-cols-3 gap-6 mx-6">
                         <span id="facility-img-1" class="border-8 md:border-8 border-white">
-                            <img class="small-img" src="{{ asset('assets/images/home/neighbour.jpeg') }}" alt="">
+                            <img class="small-img" src="{{ asset('assets/images/home/neighbour.jpeg') }}"
+                                alt="">
                         </span>
                         <span id="facility-img-2" class="border-8 md:border-8 border-white">
-                            <img class="small-img" src="{{ asset('assets/images/home/neighbour2.jpeg') }}" alt="">
+                            <img class="small-img" src="{{ asset('assets/images/home/neighbour2.jpeg') }}"
+                                alt="">
                         </span>
                         <span id="facility-img-3" class="border-8 md:border-8 border-white">
-                            <img class="small-img" src="{{ asset('assets/images/home/neighbour3.jpeg') }}" alt="">
+                            <img class="small-img" src="{{ asset('assets/images/home/neighbour3.jpeg') }}"
+                                alt="">
                         </span>
                     </div>
                 </div>
-                
+
 
 
                 <div class="shadow-lg p-4 rounded-lg col-span-2 md:col-span-1">
@@ -722,7 +724,8 @@
                 </h2>
             </div>
 
-            <div id="testimonial-card" class="lg:absolute px-16 lg:-bottom-32 lg:right-0 lg:left-0 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div id="testimonial-card"
+                class="lg:absolute px-16 lg:-bottom-32 lg:right-0 lg:left-0 grid grid-cols-1 md:grid-cols-2 gap-6">
 
                 <div id="testimonial-card-1" class="bg-white p-10 rounded-lg space-y-6 shadow-md">
                     <div class="flex items-center gap-3">
@@ -743,7 +746,8 @@
                 </div>
 
 
-                <div id="testimonial-card-2" class="bg-white p-10 rounded-lg space-y-6 shadow-md hidden lg:inline-block">
+                <div id="testimonial-card-2"
+                    class="bg-white p-10 rounded-lg space-y-6 shadow-md hidden lg:inline-block">
                     <div class="flex items-center gap-3">
                         <span>
                             <img class="w-16 h-16 rounded-full" src="{{ asset('assets/images/home/p1.jpeg') }}"
@@ -904,4 +908,3 @@
 
 
 </x-layout>
-
